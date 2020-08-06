@@ -1,0 +1,618 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+} 
+
+/* Universal styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+	border: 0;   
+    font-family: Helvetica Arial, sans-serif;
+    color:#4a4a4a;
+    text-align: left; 
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+}
+
+
+
+/* HEADER */
+   /* default (mobile version) */
+header {
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    width: 100%;  
+}
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    
+}
+
+.nav-container li span {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .u_mobile-hidden {
+        display: none;
+    }
+
+}
+
+/* DESKTOP VERSION HEADER */
+
+@media only screen and (min-width: 768px) {
+
+header {
+    justify-content: space-between;
+} 
+
+
+.navbar-img {
+    display: none
+}
+ 
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 24px;
+}
+.nav-container {
+    display: flex;
+    padding: 16px 24px;
+}
+
+nav {
+    padding-right: 16px;
+}
+
+#logo-and-name {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+}
+.nav-container li span {
+    font-size: 1.25em;
+    display: inline-block;
+    color:rgb(51, 50, 50);
+    padding: 0;
+    margin: 0;
+}
+}
+#colmar {
+    font-size: 1.5em;
+    font-weight: bold;
+    color:rgb(51, 50, 50);
+    text-transform: uppercase;
+
+}
+#academy {
+    font-size: 1.5em;
+    color: rgb(151, 150, 150);
+    text-transform: uppercase;
+}
+}
+
+/* -- SECTION 1 BANNER LEARN SOMETHING NEW -- */
+     /* default mobile version SECTION 1 */
+
+.banner-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #9e9e9e70;
+    padding-top: 64px;
+}
+
+.banner-container {
+    
+    background-image: url("./capstone_colmar_assets/images/banner.jpg");
+    background-size: cover; 
+    position: center; 
+    /*width:100%;*/
+    height: 500px;;
+}
+
+.bannertext-container {
+    padding: 32px 16px;
+    text-align: left;
+
+}
+
+.bannertext-container h1 {
+    
+    margin-bottom: 32px;
+}
+
+.bannertext-container #middle-text {
+    
+    margin-bottom: 24px;
+}
+
+
+.link-container {
+    background-color: grey;
+    text-align: center;
+    width: 100%;
+}
+
+a.starthere {
+text-decoration: none;
+color: white;
+padding: 8px;
+
+}
+/* -- desktop version SECTION 1 -- */
+
+@media only screen and (min-width: 768px) {
+
+    .banner-section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 64;
+        padding: 32px 24px;
+    
+    }
+    
+    .u_left-60 {
+        width: 60%;
+        
+    }
+
+    .u_right-40 {
+        width: 40%;
+
+   }
+
+   .bannertext-container {
+     box-sizing: border-box; 
+     padding: 24px; 
+   }
+   
+    .bannertext-container h1 {
+        padding-left: 24;
+        padding-bottom: 0;
+
+   }
+
+    .bannertext-container h3 {
+        padding-bottom: 0px;
+        padding-left: 24;
+
+   }
+
+    .bannertext-container a { 
+       padding-left: 24px;
+
+    }
+}
+
+
+
+
+
+/* -- SECTION 2 -- */
+
+
+.information-section {
+    
+    padding: 16px 16px 32px 16px;
+
+
+}
+
+.information-section picture {
+    width: 100%;
+}
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+}
+
+.article picture {
+    padding: 16px;
+}
+
+.article-text {
+    padding: 0 16px;
+}
+
+.article-text h3, p, a {
+    padding: 0 16px;
+}
+
+.article-text a {
+    color: rgb(33, 100, 223);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .mobile-hidden {
+        display: none;
+    }
+}
+/* -- section 2 information desktop -- */
+
+@media only screen and (min-width: 768px) {
+
+    .information-section {
+        /* width: 100%; ettol tul szeles az egesz oldal */
+        display: flex;
+        padding: 0 24px;
+    }
+
+    .information img {
+        width: 100%;
+    }
+
+    .information-text {
+        text-align: left;
+    }
+
+    .information-text h2{
+        margin: 32px 0 24px 0;
+    }
+
+    .information-text p {
+        padding: 0;
+    }
+
+    .u_with-margin { 
+        margin: 24px 0 32px 0;
+    }
+
+    .u_left-60 {
+        width: 60%;
+        padding: 32px 24px;
+    }
+
+    .u_right-40 {
+        width: 40%;
+    }
+
+    .article {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .article picture {
+        width: 35%;
+        height: auto;
+    }
+
+    .article picture img {
+        width: 100%;
+        
+    }
+
+    .article-text {
+        width: 65%;
+        text-align: left;
+        justify-content: center;
+        padding: 0;
+
+       
+    }
+     
+    .article-text h3, p, a {
+        padding: 0;
+    }
+    .article-text p {
+        padding: 8px 0;
+        
+    }
+
+    .u_grey {
+    background-color: rgb(187 185 185 / 81%);
+    
+    }
+    
+}
+
+
+
+/* --Section 3 mobile version --*/
+
+.start-learning {
+    padding: 16px 16px 8px 16px;
+}
+.start-learning h1 {
+    padding: 32px 0 16px 0;
+}
+
+ul {
+    margin: 0;
+    padding:0;
+    list-style-type: none;
+}
+
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: #D8D8D8;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 16px 16px 24px 16px;
+    margin-top: 8px;
+}
+
+
+ .u_text-align {
+     text-align: center;
+ } 
+
+
+
+ /* -- Media queries --*/
+
+@media only screen and (max-width: 768px) {
+
+.u_mobile-hidden {
+
+    display: none;
+}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.start-learning h1 {
+    padding-bottom: 32px;
+
+ }
+
+.start-learning {
+        
+        background-color:rgb(239 239 239);
+        padding: 32px 72px;
+        /* width: 100% - ettol tul szeles lett az egesz oldal*/
+
+ }
+
+.start-learning ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+ } 
+.card {
+    
+    box-sizing: border-box;
+    text-align: left;
+    background-color: rgb(239 239 239);
+   
+ }
+
+ .card-container a {
+     width: 33.3%;
+    
+    }
+
+.card img {
+    width: 100%; 
+    height: auto;
+ }
+
+.card-text {
+    box-sizing: border-box;
+    width: 100%;
+    height: 150px;
+    padding: 16px 16px 24px 16px;
+    background-color: white;
+    }
+
+.card-text p {
+    width: 100%;
+
+}
+
+.u_uppercase {
+     text-transform: uppercase;
+ }
+
+.card-text .courses {
+    padding: 8px 0;
+ }
+
+
+.card .left {
+    padding-right: 0 16px: 
+ }
+
+.card .middle {
+    padding: 0 16px;
+ }
+
+.card .right {
+    padding-left: 16px;
+ }
+
+.card .top {
+    padding-bottom: 16px;
+ }
+
+.card .bottom {
+    padding-top: 16px;
+ }
+ 
+
+ }
+
+/* -- Section 4 Thesis exhibit  -- */
+
+.thesis {
+    background-color: white;
+   
+}
+.thesis h1 {
+    text-align: center;
+}
+
+.video-container {
+    width:100%;
+    padding: 16px 0 24px 0;
+}
+
+video {
+    width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .u_mobile-hidden {
+    
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+.thesis h1 {
+    padding-top: 32px;
+}
+
+ .thesis-flex-container {
+     display: flex;
+ }
+
+
+ .thesis-flex-container .card-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding:16px;
+    margin-left: 24px;
+ }
+
+  .u_width-35 {
+      width: 35%; 
+
+  }
+
+  .u_width-65 {
+      width: 65%
+  }
+
+  .video-container {
+   
+    padding: 0 0 24px 0;
+}
+
+.video-and-content-container .content-container h2 {
+    padding-bottom: 8px;
+}
+/*ez az uj beiras*/
+.thesis-articles-container {
+    margin-top: 32px; 
+
+}
+
+.thesis-articles-container article {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+#fisma {
+    background-color: #d8d8d8;
+}
+article .text-container {
+     padding-left: 16px;
+
+}
+}
+/* -- Footer section --*/
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p, footer span {
+
+    font-size: 0.85em;
+    padding: 16px 0 72px 24px;
+    
+}
+
+footer span {
+
+    padding: 0 8px;
+}
